@@ -9,9 +9,21 @@ import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import AnimationContainer from "./AnimationContainer";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import AnimatedBackground from "./AnimatedBackground";
+import { cn } from "@/lib/utils";
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center  ">
+    <div className="min-h-screen  w-full flex items-center justify-center relative ">
+      <AnimatedBackground
+        numSquares={6}
+        maxOpacity={0.2}
+        duration={10}
+        repeatDelay={10}
+        className={cn(
+          "mask-[radial-gradient(400px_circle_at_center,black,transparent)] md:mask-[radial-gradient(700px_circle_at_center,black,transparent)]",
+          "inset-0 w-full h-dvh inset-y-[-15%] md:inset-y-[-30%]  -z-10 "
+        )}
+      />
       <MaxWidthWrapper className="">
         <div className="flex flex-col items-center justify-center w-full text-center bg-linear-to-t from-background">
           <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
@@ -19,7 +31,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex justify-center mb-6"
+              className="flex justify-center mb-4 mt-4"
             >
               <Badge
                 variant="outline"

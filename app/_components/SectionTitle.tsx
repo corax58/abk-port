@@ -15,7 +15,7 @@ const SectionTitle = ({ subtitle, title, className }: SectionTitleProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "flex flex-col text-7xl font-black items-center",
+        "flex flex-col text-5xl font-black items-center",
         className
       )}
     >
