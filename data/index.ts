@@ -67,3 +67,37 @@ export const tools = [
     img: "/assets/icons/redux.svg",
   },
 ];
+
+export interface SkillCategory {
+  title: string;
+  skills: string[];
+}
+
+export const SKILLS: SkillCategory[] = [
+  {
+    title: "Frontend",
+    skills: [
+      "Next.js (App Router)",
+      "React (RSC, Suspense)",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Zustand",
+      "React Query",
+      "Shadcn/UI",
+    ],
+  },
+  {
+    title: "Backend & Tools",
+    skills: [
+      "Node.js",
+      "Nestjs",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Git & GitHub",
+      "Vercel Deployment",
+      "CI/CD Basics",
+      "Jest/Testing Library",
+    ],
+  },
+];

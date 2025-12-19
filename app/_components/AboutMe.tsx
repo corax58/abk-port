@@ -4,7 +4,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function AboutMe() {
   return (
-    <section className="py-20 ">
+    <section className="py-20 w-full bg-secondary border-y">
       <SectionTitle title="About Me" subtitle="About Me" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

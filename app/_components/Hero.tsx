@@ -45,7 +45,7 @@ const Hero = () => {
             </motion.div>
 
             <h1 className="text-foreground text-center py-6 text-7xl font-bold tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-              Hi, I&apos;m <AuroraText>Abubeker</AuroraText>
+              Hi, I&apos;m <AuroraText speed={3}>Abubeker</AuroraText>
             </h1>
 
             <p className="mb-12 text-lg  text-muted-foreground md:text-xl text-balance  relative max-w-3xl">
