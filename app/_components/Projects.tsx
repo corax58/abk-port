@@ -1,12 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import SectionTitle from "./SectionTitle";
 import { motion } from "framer-motion";
+import { projects } from "@/data/projects";
+import ProjectCard from "./ProjectCard";
+import { Button } from "@/components/ui/button";
 
 const Projects = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  const filteredProjects = loaded ? projects : projects.slice(0, 3);
   return (
     <section id="skills" className="py-20  bg-secondary  w-full">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 items-center">
         <div className="text-center mb-16">
           <SectionTitle title="Experience" subtitle="Professional" />
           <motion.div
@@ -15,11 +21,18 @@ const Projects = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="text-muted-foreground mt-4 max-w-2xl mx-auto"
           >
-            Here is collect of projects I worked on or controbuted to.
+            Projects I have worked on or controbuted to.
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 gap-5"></div>
+        <div className=" flex flex-col gap-16">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+        <Button onClick={() => setLoaded((prev) => !prev)}>
+          {loaded ? "Show Less" : "Load More"}
+        </Button>
       </div>
     </section>
   );

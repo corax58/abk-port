@@ -5,7 +5,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Matter from "matter-js";
-import { tools } from "@/data";
+import { tools } from "@/data/skills";
 
 const ICON_SIZE = 0.05;
 

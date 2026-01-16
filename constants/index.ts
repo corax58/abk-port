@@ -1,10 +1,4 @@
-import {
-  ExperienceItem,
-  ProjectItem,
-  SkillCategory,
-  SocialLink,
-} from "@/types";
-import { Github, Linkedin, Mail, Briefcase } from "lucide-react";
+import { ExperienceItem, ProjectItem } from "@/types";
 
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
@@ -12,35 +6,6 @@ export const NAV_ITEMS = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
-];
-
-export const SKILLS: SkillCategory[] = [
-  {
-    title: "Frontend",
-    skills: [
-      "Next.js (App Router)",
-      "React (RSC, Suspense)",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Zustand",
-      "React Query",
-      "Shadcn/UI",
-    ],
-  },
-  {
-    title: "Backend & Tools",
-    skills: [
-      "Node.js",
-      "REST APIs",
-      "Prisma ORM",
-      "PostgreSQL",
-      "Git & GitHub",
-      "Vercel Deployment",
-      "CI/CD Basics",
-      "Jest/Testing Library",
-    ],
-  },
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
@@ -119,11 +84,4 @@ export const PROJECTS: ProjectItem[] = [
     githubLink: "#",
     image: "https://picsum.photos/800/602?grayscale",
   },
-];
-
-export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "Email", url: "mailto:hello@abubeker.dev", icon: Mail },
-  { platform: "GitHub", url: "https://github.com", icon: Github },
-  { platform: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
-  { platform: "Upwork", url: "https://upwork.com", icon: Briefcase },
 ];

@@ -7,28 +7,27 @@ export default function AboutMe() {
     <section className="py-20 w-full bg-secondary border-y">
       <SectionTitle title="About Me" subtitle="About Me" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
           <div>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I am a passionate <strong>Frontend Developer</strong> with over
-                9 months of production experience building modern web
-                applications. My journey started with a curiosity for how things
-                work on the web, which quickly turned into an obsession with
-                clean code and pixel-perfect UIs.
+                I&apos;m a <strong>full-stack developer</strong> with hands-on
+                experience building and maintaining modern web applications. I
+                care a lot about writing clear, maintainable code and building
+                interfaces that feel solid and intentional.
               </p>
+
               <p>
-                Currently, I specialize in the <strong>React ecosystem</strong>,
-                particularly <strong>Next.js</strong>. I don&apos;t just write
-                code; I care deeply about architecture, scalability, and the
-                end-user experience. Whether it&apos;s optimizing Core Web
-                Vitals or designing a reusable component library, I treat every
-                project with a product-first mindset.
+                Most of my recent work is in the React ecosystem, especially
+                Next.js. I spend a lot of time thinking about application
+                structure, performance, and how users actually interact with
+                what I build.
               </p>
+
               <p>
-                I thrive in environments where I can solve complex problems,
-                such as managing complex state, optimizing render cycles, or
-                integrating robust APIs.
+                I enjoy tackling problems like managing complex state, improving
+                rendering performance, and integrating APIs in a way that keeps
+                the codebase easy to reason about.
               </p>
             </div>
           </div>
@@ -45,24 +44,43 @@ export default function AboutMe() {
                   opacity: 1,
                 }}
               >
-                <div className="mx-2 flex-1">
-                  <div className="relative mt-2 aspect-3/4 w-full">
+                {/* Avatar */}
+                <div className="flex justify-center mt-8">
+                  <div className="relative h-40 w-40">
                     <img
                       loading="lazy"
-                      className="absolute inset-0 h-full w-full rounded-2xl bg-[#000000] object-cover "
-                      alt="Invite background"
                       src="/assets/image.png"
-                      style={{
-                        // boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
-                        opacity: 1,
-                      }}
+                      alt="Profile picture"
+                      className="h-full w-full rounded-full object-cover border-4 border-[#2A2C2C]"
                     />
                   </div>
                 </div>
-                <div className="mt-2 flex shrink-0 items-center justify-between p-4 font-mono text-white">
-                  <div className="text-xs">Abubeker Abduljelil</div>
-                  <div className="text-xs text-gray-300 opacity-50">
-                    Full Stack Dev
+
+                {/* Identity */}
+                <div className="mt-4 text-center text-white">
+                  <h2 className="text-lg font-semibold tracking-wide">
+                    Abubeker Abduljelil
+                  </h2>
+                  <p className="text-sm text-gray-400">Software Engineer</p>
+                </div>
+
+                {/* Divider */}
+                <div className="mt-12 mb-4 h-px w-full bg-[#2A2C2C]" />
+
+                {/* Info section */}
+                <div className="space-y-2 font-mono text-sm text-gray-300">
+                  <div className="flex justify-between">
+                    <span className="opacity-60">Age</span>
+                    <span>24</span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <span className="opacity-60">Phone</span>
+                    <span>+251 9XX XXX XXX</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="opacity-60">Email</span>
+                    <span>AbubekerCorax@gmail.com</span>
                   </div>
                 </div>
               </button>

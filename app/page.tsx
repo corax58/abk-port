@@ -1,10 +1,8 @@
-import { cn } from "@/lib/utils";
-import AnimatedBackground from "./_components/AnimatedBackground";
-import Hero from "./_components/Hero";
-import SectionTitle from "./_components/SectionTitle";
 import AboutMe from "./_components/AboutMe";
-import { Skills } from "./_components/Skills";
+import ContactMe from "./_components/ContactMe";
+import Hero from "./_components/Hero";
 import Projects from "./_components/Projects";
+import { Skills } from "./_components/Skills";
 
 export default function Home() {
   return (
@@ -13,6 +11,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Projects />
+      <ContactMe />
     </main>
   );
 }

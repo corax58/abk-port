@@ -10,11 +10,6 @@ export interface SkillItem {
   icon?: LucideIcon;
 }
 
-export interface SkillCategory {
-  title: string;
-  skills: string[];
-}
-
 export interface ExperienceItem {
   company?: string;
   project: string;
@@ -38,7 +33,7 @@ export interface ProjectItem {
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: LucideIcon;
+  icon: string;
 }
 
 import { ComponentPropsWithoutRef, RefAttributes } from "react";
@@ -59,3 +54,25 @@ export interface IconProps
   mirrored?: boolean;
 }
 export type Icon = React.ForwardRefExoticComponent<IconProps>;
+
+export interface Project {
+  title: string;
+  description: string;
+  projectSource: string;
+  status: "live" | "inProgress";
+  liveLink: string | undefined;
+  imgSrc: string;
+  alt: string;
+  contribution: string;
+  toolsId: string[];
+}
+
+export interface SkillCategory {
+  title: string;
+  skillSlugs: string[];
+}
+export interface Skill {
+  slug: string;
+  name: string;
+  img: string;
+}

@@ -1,5 +1,5 @@
 "use client";
-import { SKILLS } from "@/data";
+import { SkillCategories } from "@/data/skills";
 import SectionTitle from "./SectionTitle";
 import SkillCard from "./SkillCategoryCard";
 import { motion } from "framer-motion";
@@ -21,8 +21,8 @@ export const Skills = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 gap-5">
-          {SKILLS.map((skill, index) => (
+        <div className="grid md:grid-cols-2 gap-5">
+          {SkillCategories.map((skill, index) => (
             <SkillCard key={index} skillCategory={skill} />
           ))}
         </div>
