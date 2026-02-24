@@ -4,6 +4,7 @@ import { SOCIAL_LINKS } from "@/data/socialLinks";
 import { Copy, CopyCheck } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { toast } from "sonner";
 
 const src = "/assets/icons/socialIcons/gmail.svg";
 const QuickLinks = () => {
@@ -13,14 +14,15 @@ const QuickLinks = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
     setIsCopied(true);
+    toast.success("Email copied to clipboard!");
   };
   return (
-    <div className="flex flex-col gap-4 max-w-sm">
+    <div className="flex flex-col gap-4 md:max-w-sm max-md:items-center max-md:w-full ">
       <p className=" text-sm text-muted-foreground"> Connect with me</p>
       <div className=" border-border border rounded-2xl p-2 flex justify-between items-center">
         <Image
           src={src}
-          className={`size-14 rounded-2xl hover:scale-110 transition-all `}
+          className={` size-10 sm:size-14 rounded-lg hover:scale-110 transition-all border `}
           alt={"gmail"}
           width={54}
           height={54}
@@ -35,7 +37,7 @@ const QuickLinks = () => {
         </Button>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-2">
         {SOCIAL_LINKS.map((socialLink, index) => (
           <div
             key={index}
@@ -47,7 +49,7 @@ const QuickLinks = () => {
               </div>
               <Image
                 src={socialLink.icon}
-                className={`size-14 rounded-2xl hover:scale-110 transition-all `}
+                className={`size-13.5 rounded-lg hover:scale-110 transition-all `}
                 alt={socialLink.platform}
                 width={54}
                 height={54}

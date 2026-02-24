@@ -2,68 +2,53 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    title: "Enterprise Analytics Dashboard",
+    title: "Time Delivery",
     description:
-      "A high-performance analytics platform designed for real-time financial monitoring, featuring interactive heatmaps and custom reporting engines.",
+      "A high-performance food delivery marketplace allowing users to explore menus and order from various restaurants. Features robust localization support for bi-directional layouts (LTR/RTL).",
     projectSource: "Venas Technologies",
-    liveLink: "https://github.com/example/enterprise-analytics", // Placeholder URL
-    status: "live",
-    imgSrc: "/assets/projects/1.png",
-    alt: "Screenshot of the Enterprise Analytics Dashboard showing financial data tables",
+    status: "inProgress",
+    imgSrc: "/assets/projects/time.png",
+    alt: "Screenshot of the Time Delivery application interface",
     contribution:
-      "As Lead Full-stack Developer, I architected the core data pipeline and built a modular component library using React and Tailwind. I focused on optimizing data fetching strategies to reduce initial load time by 60%.",
+      "Spearheaded the frontend development, architecting both static and complex dynamic routes. Engineered a comprehensive internationalization (i18n) system to ensure UI consistency across English, Pashto, and Dari, while optimizing load times for a seamless user experience.",
     toolsId: ["react", "nextjs", "tailwind", "typescript"],
   },
   {
-    title: "Quantum Supply Chain Optimizer",
+    title: "Venas Technologies",
     description:
-      "An AI-driven logistics engine that predicts inventory shortages and optimizes delivery routes using real-time GPS telemetry.",
+      "A corporate web presence utilizing a Headless CMS and Incremental Static Regeneration (ISR) to achieve top-tier SEO rankings and lightning-fast performance.",
     projectSource: "Venas Technologies",
-    liveLink: "https://github.com/example/supply-optimizer",
+    liveLink: "https://www.venastechnology.com/",
     status: "live",
-    imgSrc: "/assets/projects/2.png",
-    alt: "Visual representation of supply chain nodes and delivery routes",
+    imgSrc: "/assets/projects/venas.png",
+    alt: "Venas Technologies corporate website homepage",
     contribution:
-      "Engineered the predictive modeling interface and integrated Mapbox for real-time fleet tracking. Implemented WebSockets to handle high-frequency data updates.",
-    toolsId: ["react", "nodejs", "python", "mapbox"],
+      "Developed modular components and integrated Prismic CMS for dynamic content management. Implemented complex UI micro-interactions using Framer Motion and audited Core Web Vitals to maximize search engine visibility.",
+    toolsId: ["nextjs", "tailwind", "prismic", "framer"],
   },
   {
-    title: "SecureHealth Patient Portal",
+    title: "Doxiverse | AI for Healthcare",
     description:
-      "A HIPAA-compliant healthcare portal allowing patients to securely access records, book appointments, and consult with doctors via encrypted video.",
+      "A centralized hub for discovering healthcare AI tools, featuring real-time updates and a community-driven review system.",
     projectSource: "Venas Technologies",
-    liveLink: "https://github.com/example/secure-health",
-    status: "inProgress",
-    imgSrc: "/assets/projects/3.png",
-    alt: "Patient dashboard showing medical history and upcoming appointments",
-    contribution:
-      "Developed the end-to-end encryption module for messaging and built the responsive appointment scheduling system with automated SMS reminders.",
-    toolsId: ["nextjs", "postgresql", "aws", "typescript"],
-  },
-  {
-    title: "NeoTrade Crypto Exchange",
-    description:
-      "A high-frequency trading platform for digital assets featuring low-latency order execution and advanced technical analysis charting.",
-    projectSource: "Venas Technologies",
-    liveLink: "https://github.com/example/neotrade",
+    liveLink: "https://doxiverse.com/",
     status: "live",
-    imgSrc: "/assets/projects/4.png",
-    alt: "Trading interface with candlesticks charts and order books",
+    imgSrc: "/assets/projects/doxiverse.png",
+    alt: "Doxiverse healthcare AI platform dashboard",
     contribution:
-      "Optimized the rendering of the order book component to handle 10k+ updates per second without UI lag. Designed the microservices architecture for the wallet system.",
-    toolsId: ["react", "go", "redis", "docker"],
+      "Delivered high-fidelity UI implementation from design mockups. Handled third-party API integrations and executed performance tuning to ensure smooth navigation through large datasets.",
+    toolsId: ["nextjs", "tailwind"],
   },
   {
-    title: "EduStream Learning LMS",
+    title: "Iqra-Net",
     description:
-      "An enterprise-grade Learning Management System focused on interactive video content and automated grading for corporate training.",
-    projectSource: "Venas Technologies",
-    liveLink: "https://github.com/example/edustream",
+      "A comprehensive EdTech platform facilitating Islamic learning through structured courses and live one-on-one mentorship sessions.",
+    projectSource: "Beseerah LLC",
     status: "inProgress",
-    imgSrc: "/assets/projects/5WS.png",
-    alt: "LMS dashboard showing course progress and quiz results",
+    imgSrc: "/assets/projects/beseerah.png",
+    alt: "Iqra-Net e-learning platform hero section",
     contribution:
-      "Built the custom video player with bookmarking capabilities and integrated a scalable PDF generation service for course certifications.",
-    toolsId: ["react", "firebase", "tailwind", "node"],
+      "Translated UX designs into responsive, pixel-perfect code. Optimized asset delivery and component rendering to support real-time interaction features.",
+    toolsId: ["nextjs", "tailwind"],
   },
 ];

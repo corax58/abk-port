@@ -9,7 +9,7 @@ export const Skills = () => {
     <section id="skills" className="py-20  border-y  w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <SectionTitle title="Skills" subtitle="Skills" />
+          <SectionTitle title="Skills" subtitle="Technical" />
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}

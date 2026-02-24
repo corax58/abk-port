@@ -6,7 +6,7 @@ import { Skills } from "./_components/Skills";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden pb-[500px]">
+    <main className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden pb-10">
       <Hero />
       <AboutMe />
       <Skills />

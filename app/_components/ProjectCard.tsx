@@ -1,8 +1,9 @@
 import { getSkillBySlug } from "@/data/skills";
 import { Project } from "@/types";
-import { SquareTerminal, User } from "lucide-react";
+import { Globe, Link, SquareTerminal, User } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
   project: Project;
@@ -15,13 +16,27 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="grid grid-cols-1 lg:grid-cols-2 gap-8"
     >
-      <div className="relative w-full aspect-video">
-        <Image
-          src={project.imgSrc}
-          alt={project.alt}
-          fill
-          className="rounded-3xl"
-        ></Image>
+      <div className="relative w-full aspect-video border rounded-3xl overflow-hidden">
+        <Image src={project.imgSrc} alt={project.alt} fill className="" />
+        <div className=" absolute bottom-5 px-5 w-full text-sm flex items-center gap-4">
+          {project.status === "inProgress" && (
+            <div className=" bg-orange-200 text-orange-500 border border-amber-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all py-1">
+              In Progress
+            </div>
+          )}
+          {project.status === "live" && (
+            <div className=" bg-green-200 text-green-500 border border-green-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all py-1">
+              Live
+            </div>
+          )}
+          {project.liveLink && (
+            <Button className="aspect-square bg-background border size-8 group transition-all">
+              <a href={project.liveLink} target="_blank">
+                <Link className="text-foreground  group-hover:text-white" />
+              </a>
+            </Button>
+          )}
+        </div>
       </div>
       <div className="w-full">
         <p className="text-3xl font-semibold mb-1">{project.title}</p>
@@ -47,7 +62,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               if (!tool) return null;
               return (
                 <div key={toolId} className="flex flex-col items-center gap-2">
-                  <div className="  h-min  border-border border rounded-2xl p-2 overflow-clip">
+                  <div className="  h-min  border-border dark:bg-secondary border rounded-2xl p-2 overflow-clip">
                     <div className="relative ">
                       <Image
                         src={tool.img}

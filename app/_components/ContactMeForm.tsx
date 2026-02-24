@@ -7,22 +7,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
+import { sendMainAction } from "@/action/sendMailAction";
 
 const initialData: ContactData = {
   full_name: "",
   email: "",
   country: "",
+  company: "",
   subject: "",
   description: "",
 };
 
-const subjectOptions = ["Option 1", "Option 2", "Other"];
 const StyledAstrix = () => <span className="text-sky-400">*</span>;
 
 export interface ContactData {
   full_name: string;
   email: string;
   country: string;
+  company: string;
   subject: string;
   description: string;
 }
@@ -38,18 +41,17 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
     setIsLoading(true);
 
     try {
-      console.log(contactData);
-      //   Implement email sending functionionality here
+      await sendMainAction(contactData);
       setFormData(initialData);
-      console.log("Message sent successfully");
+      toast.success("Message sent successfully!");
     } catch (err: unknown) {
       console.error(err);
       if (err instanceof Error) {
         //use toast to show error
-        console.error("Error", { description: err.message });
+        toast.error("Error", { description: err.message });
       } else {
         //use toast to show error
-        console.error("Error", {
+        toast.error("Error", {
           description: "An unexpected error occurred. Please try again.",
         });
       }
@@ -59,7 +61,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -89,6 +91,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
     ) {
       //use toast to show error
       console.error("Please fill all required fields");
+      toast.error("Please fill all required fields");
       return;
     }
     await sendContactData(trimmedData);
@@ -98,7 +101,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
     <form
       className={cn(
         "bg-transparent relative z-10 rounded-3xl p-6 w-full md:w-1/2 border h-fit",
-        className
+        className,
       )}
       onSubmit={handleSubmit}
     >
@@ -142,6 +145,19 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
             value={formData.country}
             name="country"
             required
+            onChange={handleChange}
+          />
+        </div>
+        <div className="hidden  tab-1 flex-col gap-3">
+          <label className="text-sm font-medium ">
+            Company <StyledAstrix />
+          </label>
+          <Input
+            className={cn("w-full")}
+            placeholder="Eg, United kingdom"
+            value={formData.company}
+            tabIndex={-1}
+            name="company"
             onChange={handleChange}
           />
         </div>

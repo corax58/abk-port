@@ -11,15 +11,16 @@ export const SkillCategories: SkillCategory[] = [
       "tailwind",
       "redux",
       "react-query",
+      "framer",
     ],
   },
   {
     title: "Backend",
-    skillSlugs: ["nodejs", "expressjs", "python"],
+    skillSlugs: ["nestjs", "nodejs", "expressjs", "python", "flask"],
   },
   {
     title: "Database & Tools",
-    skillSlugs: ["postgresql", "mongodb", "mysql", "prisma"],
+    skillSlugs: ["postgresql", "mongodb", "mysql", "prisma", "prismic"],
   },
 ];
 
@@ -53,6 +54,16 @@ export const skills = [
     slug: "nodejs",
     name: "Node.js",
     img: "/assets/icons/nodejs.svg",
+  },
+  {
+    slug: "flask",
+    name: "Flask",
+    img: "/assets/icons/flask.svg",
+  },
+  {
+    slug: "nestjs",
+    name: "NestJs",
+    img: "/assets/icons/nestjs.svg",
   },
   {
     slug: "postgresql",
@@ -93,6 +104,16 @@ export const skills = [
     slug: "typescript",
     name: "Typescript",
     img: "/assets/icons/typescript.svg",
+  },
+  {
+    slug: "prismic",
+    name: "Prismic",
+    img: "/assets/icons/prismic.svg",
+  },
+  {
+    slug: "framer",
+    name: "Framer Motion",
+    img: "/assets/icons/framer.svg",
   },
 ];
 export function getSkillBySlug(slug: string) {

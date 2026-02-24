@@ -45,8 +45,7 @@ export type IconWeight =
   | "fill"
   | "duotone";
 export interface IconProps
-  extends ComponentPropsWithoutRef<"svg">,
-    RefAttributes<SVGSVGElement> {
+  extends ComponentPropsWithoutRef<"svg">, RefAttributes<SVGSVGElement> {
   alt?: string;
   color?: string;
   size?: string | number;
@@ -60,7 +59,7 @@ export interface Project {
   description: string;
   projectSource: string;
   status: "live" | "inProgress";
-  liveLink: string | undefined;
+  liveLink?: string | undefined;
   imgSrc: string;
   alt: string;
   contribution: string;

@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
               href="#"
               className="text-xl font-bold font-display tracking-tight "
             >
-              abubeker<span className="text-indigo-500">.dev</span>
+              abubeker<span className="text-primary">.dev</span>
             </a>
           </div>
 
@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-slate-800 overflow-hidden"
+            className="md:hidden bg-background border-b  overflow-hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {NAV_ITEMS.map((item) => (

@@ -1,27 +1,27 @@
 "use client";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Badge } from "@/components/ui/badge";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { Highlighter } from "@/components/ui/highlighter";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import AnimationContainer from "./AnimationContainer";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import AnimatedBackground from "./AnimatedBackground";
-import { cn } from "@/lib/utils";
 const Hero = () => {
   return (
     <div className="min-h-screen  w-full flex items-center justify-center relative ">
-      <AnimatedBackground
-        numSquares={6}
-        maxOpacity={0.2}
-        duration={10}
-        repeatDelay={10}
+      <AnimatedGridPattern
+        // numSquares={6}
+        maxOpacity={0.1}
+        // duration={10}
+        // repeatDelay={10}
         className={cn(
           "mask-[radial-gradient(400px_circle_at_center,black,transparent)] md:mask-[radial-gradient(700px_circle_at_center,black,transparent)]",
-          "inset-0 w-full h-dvh inset-y-[-15%] md:inset-y-[-30%]  -z-10 "
+          "inset-0 w-full h-dvh inset-y-[-15%] md:inset-y-[-30%]  -z-10 ",
         )}
       />
       <MaxWidthWrapper className="">
