@@ -11,7 +11,7 @@ const Projects = () => {
 
   const filteredProjects = loaded ? projects : projects.slice(0, 3);
   return (
-    <section id="skills" className="py-20  bg-secondary  w-full">
+    <section id="experience" className="py-20  bg-secondary  w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 items-center">
         <div className="text-center mb-16">
           <SectionTitle title="Experience" subtitle="Professional" />

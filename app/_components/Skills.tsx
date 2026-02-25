@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-20  border-y  w-full">
+    <section id="skills" className="py-20  relative border-y  w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <SectionTitle title="Skills" subtitle="Technical" />

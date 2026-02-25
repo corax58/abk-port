@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { SOCIAL_LINKS } from "@/data/socialLinks";
-import { Copy, CopyCheck } from "lucide-react";
+import { Copy, CopyCheck, Link } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { toast } from "sonner";
@@ -39,7 +39,9 @@ const QuickLinks = () => {
 
       <div className="flex justify-between gap-2">
         {SOCIAL_LINKS.map((socialLink, index) => (
-          <div
+          <a
+            href={socialLink.url}
+            target="_blank"
             key={index}
             className="  h-fit w-fit border-border border rounded-2xl p-2 overflow-clip"
           >
@@ -55,7 +57,7 @@ const QuickLinks = () => {
                 height={54}
               ></Image>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
