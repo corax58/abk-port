@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./_components/Navbar";
+import Footer from "./_components/Footer";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Toaster } from "sonner";
 import { SITE } from "@/lib/site";
@@ -102,6 +103,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className=" mx-auto w-full z-0 relative">{children}</main>
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

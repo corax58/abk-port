@@ -17,8 +17,21 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="grid grid-cols-1 lg:grid-cols-2 gap-8"
     >
-      <div className="relative w-full aspect-video border rounded-3xl overflow-hidden">
-        <Image src={project.imgSrc} alt={project.alt} fill className="" />
+      <div className="relative w-full aspect-video border rounded-3xl overflow-hidden  transition-all">
+        <div className="relative w-full aspect-video rounded-3xl overflow-hidden group">
+          <Image
+            src={project.imgSrc}
+            alt={project.alt}
+            fill
+            className="object-cover opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+          />
+          <Image
+            src={project.imgSrc}
+            alt={project.alt}
+            fill
+            className="object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+        </div>
         <div className=" absolute bottom-5 px-5 w-full text-sm flex items-center gap-4">
           {project.status === "inProgress" && (
             <div className=" bg-orange-200 text-orange-500 border border-amber-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all py-1">
@@ -31,9 +44,16 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </div>
           )}
           {project.liveLink && (
-            <Button className="aspect-square bg-background border size-8 group transition-all">
-              <a href={project.liveLink} target="_blank">
-                <Link className="text-foreground  group-hover:text-white" />
+            <Button
+              asChild
+              className="aspect-square bg-background border size-8 group"
+            >
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Link className="text-foreground group-hover:text-white" />
               </a>
             </Button>
           )}

@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <section id="about" className="py-20 w-full bg-secondary border-y">
       <SectionTitle title="About Me" subtitle="Personal Info" />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
           {/* Bio Text Section */}
           <div className="md:w-1/2">

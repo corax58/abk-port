@@ -14,5 +14,6 @@ export const SITE = {
     name: "Abubeker Abduljelil",
     email: "AbubekerCorax@gmail.com",
     phone: "+251916115888",
+    phoneAlt: "+251911000000",
   },
 } as const;
