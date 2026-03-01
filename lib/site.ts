@@ -4,9 +4,9 @@ const siteUrl = rawUrl.endsWith("/") ? rawUrl.slice(0, -1) : rawUrl;
 
 export const SITE = {
   name: "Abubeker Abduljelil",
-  title: "Abubeker Abduljelil — Full Stack TypeScript Developer",
+  title: "Abubeker Abduljelil — Full Stack Developer",
   description:
-    "Full Stack TypeScript developer crafting high-performance, scalable web applications with clean architecture and great UX.",
+    "Full Stack developer crafting high-performance, scalable web applications with clean architecture and great UX.",
   url: siteUrl,
   locale: "en_US",
   socialImage: "/assets/image.png",
@@ -14,6 +14,6 @@ export const SITE = {
     name: "Abubeker Abduljelil",
     email: "AbubekerCorax@gmail.com",
     phone: "+251916115888",
-    phoneAlt: "+251911000000",
+    phoneAlt: "+251992823621",
   },
 } as const;
