@@ -1,4 +1,5 @@
 import { getSkillBySlug } from "@/data/skills";
+import { cn } from "@/lib/utils";
 import { SkillCategory } from "@/types";
 import Image from "next/image";
 import React from "react";
@@ -22,12 +23,12 @@ const SkillCategoryCard = ({
             <div key={slug} className="flex flex-col items-center gap-2 ">
               <div className="  h-min  border-border border rounded-2xl dark:bg-secondary p-2 overflow-clip">
                 <div className="relative ">
-                  <div className=" w-full h-full flex ">
-                    <div className="absolute w-5 h-5 blur-md  rounded-full bg-white dark:opacity-20"></div>
-                  </div>
                   <Image
                     src={skill.img}
-                    className={`size-14 rounded-2xl hover:scale-110 transition-all `}
+                    className={cn(
+                      `size-14 rounded-2xl hover:scale-110 transition-all `,
+                      skill.invertDark && "dark:invert",
+                    )}
                     alt={skill.name}
                     width={54}
                     height={54}

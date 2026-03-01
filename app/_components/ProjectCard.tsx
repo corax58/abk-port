@@ -4,6 +4,7 @@ import { Globe, Link, SquareTerminal, User } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Project;
@@ -66,7 +67,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     <div className="relative ">
                       <Image
                         src={tool.img}
-                        className={`size-8 rounded-md hover:scale-110 transition-all `}
+                        className={cn(
+                          `size-8 rounded-md hover:scale-110 transition-all `,
+                          tool.invertDark && "dark:invert",
+                        )}
                         alt={tool.name}
                         width={32}
                         height={32}

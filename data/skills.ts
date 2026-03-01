@@ -49,6 +49,7 @@ export const skills = [
     slug: "nextjs",
     name: "Next.js",
     img: "/assets/icons/nextjs.svg",
+    invertDark: true,
   },
   {
     slug: "nodejs",
@@ -59,6 +60,7 @@ export const skills = [
     slug: "flask",
     name: "Flask",
     img: "/assets/icons/flask.svg",
+    invertDark: true,
   },
   {
     slug: "nestjs",
@@ -114,6 +116,7 @@ export const skills = [
     slug: "framer",
     name: "Framer Motion",
     img: "/assets/icons/framer.svg",
+    invertDark: true,
   },
 ];
 export function getSkillBySlug(slug: string) {
