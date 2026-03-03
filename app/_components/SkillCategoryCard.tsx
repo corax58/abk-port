@@ -13,7 +13,7 @@ const SkillCategoryCard = ({
   return (
     <div className=" border rounded-2xl overflow-hidden">
       <div className="w-full p-4 border-b bg-secondary">
-        <p className="text-xl font-semibold">{title}</p>
+        <h3 className="text-xl font-semibold">{title}</h3>
       </div>
       <div className="flex flex-wrap gap-4 p-4 ">
         {skillSlugs.map((slug) => {

@@ -14,9 +14,9 @@ const ContactMe = () => {
       <div className=" flex max-md:flex-col gap-8  max-w-7xl mx-auto">
         <div className="md:w-1/2 z-10 relative pt-12 max-md:px-4 flex flex-col justify-between gap-16">
           <div className="flex flex-col gap-5 max-md:items-center">
-            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl max-md:text-center ">
+            <h3 className="font-bold text-3xl md:text-4xl lg:text-5xl max-md:text-center ">
               Let&apos;s <AuroraText speed={3}>Build Great Software</AuroraText>
-            </h1>
+            </h3>
 
             <p className="text-muted-foreground md:pr-12 max-md:text-center">
               Have a vision? Lets turn it into high-performance reality. Reach

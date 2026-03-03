@@ -66,9 +66,9 @@ export default function AboutMe() {
 
                 {/* Identity */}
                 <div className="mt-4 text-center text-white">
-                  <h2 className="text-lg font-semibold tracking-wide">
+                  <h3 className="text-lg font-semibold tracking-wide">
                     Abubeker Abduljelil
-                  </h2>
+                  </h3>
                   <p className="text-sm text-gray-400">Software Engineer</p>
                 </div>
 

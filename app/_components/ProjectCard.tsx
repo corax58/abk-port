@@ -1,6 +1,6 @@
 import { getSkillBySlug } from "@/data/skills";
 import { Project } from "@/types";
-import { Globe, Link, SquareTerminal, User } from "lucide-react";
+import { Link, SquareTerminal, User } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -60,7 +60,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
       </div>
       <div className="w-full">
-        <p className="text-3xl font-semibold mb-1">{project.title}</p>
+        <h3 className="text-3xl font-semibold mb-1">{project.title}</h3>
         <p className="text-sm text-primary mb-2">{project.projectSource}</p>
         <p className="text-sm text-muted-foreground mb-4">
           {project.description}

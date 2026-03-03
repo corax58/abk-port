@@ -10,25 +10,25 @@ interface SectionTitleProps {
 }
 const SectionTitle = ({ subtitle, title, className }: SectionTitleProps) => {
   return (
-    <motion.div
+    <motion.header
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "flex flex-col text-5xl font-black items-center",
+        "flex flex-col text-5xl font-black items-center font-heading",
         className
       )}
     >
-      <motion.div
+      <motion.p
         className="bg-linear-to-b from-foreground/35 text-transparent  to-transparent  bg-clip-text"
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
       >
         {subtitle}
-      </motion.div>
-      <div className="-mt-5 text-primary">{title}</div>
-    </motion.div>
+      </motion.p>
+      <h2 className="-mt-5 text-primary">{title}</h2>
+    </motion.header>
   );
 };
 
