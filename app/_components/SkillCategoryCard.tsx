@@ -20,14 +20,15 @@ const SkillCategoryCard = ({
           const skill = getSkillBySlug(slug);
           if (!skill) return null;
           return (
-            <div key={slug} className="flex flex-col items-center gap-2 ">
-              <div className="  h-min  border-border border rounded-2xl dark:bg-secondary p-2 overflow-clip">
-                <div className="relative ">
+            <div key={slug} className="flex flex-col items-center gap-2 group ">
+              <div className="  h-min  border-border border rounded-2xl dark:bg-secondary p-4 overflow-clip">
+                <div className="relative flex items-center justify-center">
+                  <div className="bg-white size-10 absolute blur-[55px] group-hover:blur-2xl"></div>
                   <Image
                     src={skill.img}
                     className={cn(
-                      `size-14 rounded-2xl hover:scale-110 transition-all `,
-                      skill.invertDark && "dark:invert",
+                      `size-14 rounded-2xl group-hover:scale-110 transition-all z-10`,
+                      skill.invertDark && "",
                     )}
                     alt={skill.name}
                     width={54}
