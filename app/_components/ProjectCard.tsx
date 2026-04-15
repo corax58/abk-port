@@ -34,19 +34,19 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         <div className=" absolute bottom-5 px-5 w-full text-sm flex items-center gap-4">
           {project.status === "inProgress" && (
-            <div className=" bg-orange-200 text-orange-500 border border-amber-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all py-1">
+            <div className=" bg-orange-500 text-white border border-amber-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all ">
               In Progress
             </div>
           )}
           {project.status === "live" && (
-            <div className=" bg-green-200 text-green-500 border border-green-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all py-1">
+            <div className=" bg-green-500 text-white border border-green-600  w-fit  rounded-full px-3 font-bold hover:scale-105 transition-all ">
               Live
             </div>
           )}
           {project.liveLink && (
             <Button
               asChild
-              className="aspect-square bg-background border size-8 group"
+              className="aspect-square bg-background border size-8 group transition-all"
             >
               <a
                 href={project.liveLink}

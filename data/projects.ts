@@ -2,18 +2,6 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    title: "Time Delivery",
-    description:
-      "A high-performance food delivery marketplace allowing users to explore menus and order from various restaurants. Features robust localization support for bi-directional layouts (LTR/RTL).",
-    projectSource: "Venas Technologies",
-    status: "inProgress",
-    imgSrc: "/assets/projects/time.png",
-    alt: "Screenshot of the Time Delivery application interface",
-    contribution:
-      "Spearheaded the frontend development, architecting both static and complex dynamic routes. Engineered a comprehensive internationalization (i18n) system to ensure UI consistency across English, Pashto, and Dari, while optimizing load times for a seamless user experience.",
-    toolsId: ["react", "nextjs", "tailwind", "typescript"],
-  },
-  {
     title: "Venas Technologies",
     description:
       "A corporate web presence utilizing a Headless CMS and Incremental Static Regeneration (ISR) to achieve top-tier SEO rankings and lightning-fast performance.",
@@ -38,6 +26,31 @@ export const projects: Project[] = [
     contribution:
       "Delivered high-fidelity UI implementation from design mockups. Handled third-party API integrations and executed performance tuning to ensure smooth navigation through large datasets.",
     toolsId: ["nextjs", "tailwind"],
+  },
+  {
+    title: "Astrah OS",
+    description:
+      "A WhatsApp-first AI Business Operating System for GCC companies, streamlining CRM, sales workflows, automated follow-ups, and payments into a single platform built for real operators.",
+    projectSource: "Venas Technologies",
+    status: "live",
+    imgSrc: "/assets/projects/astrah.png",
+    liveLink: "https://doxiverse.com/",
+    alt: "Astrah OS business operating system interface",
+    contribution:
+      "Led key design decisions and delivered a fully pixel-perfect implementation of the entire site. Applied SEO best practices to improve discoverability, iterated based on real user feedback, and ensured a polished, high-performance user experience.",
+    toolsId: ["nextjs", "tailwind", "typescript"],
+  },
+  {
+    title: "Time Delivery",
+    description:
+      "A high-performance food delivery marketplace allowing users to explore menus and order from various restaurants. Features robust localization support for bi-directional layouts (LTR/RTL).",
+    projectSource: "Venas Technologies",
+    status: "inProgress",
+    imgSrc: "/assets/projects/time.png",
+    alt: "Screenshot of the Time Delivery application interface",
+    contribution:
+      "Spearheaded the frontend development, architecting both static and complex dynamic routes. Engineered a comprehensive internationalization (i18n) system to ensure UI consistency across English, Pashto, and Dari, while optimizing load times for a seamless user experience.",
+    toolsId: ["react", "nextjs", "tailwind", "typescript"],
   },
   {
     title: "Iqra-Net",
