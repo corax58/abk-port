@@ -34,7 +34,7 @@ export const projects: Project[] = [
     projectSource: "Venas Technologies",
     status: "live",
     imgSrc: "/assets/projects/astrah.png",
-    liveLink: "https://doxiverse.com/",
+    liveLink: "http://astrah.net/",
     alt: "Astrah OS business operating system interface",
     contribution:
       "Led key design decisions and delivered a fully pixel-perfect implementation of the entire site. Applied SEO best practices to improve discoverability, iterated based on real user feedback, and ensured a polished, high-performance user experience.",
