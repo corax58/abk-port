@@ -61,13 +61,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
       <div className="w-full">
         <h3 className="text-3xl font-semibold mb-1">{project.title}</h3>
-        <p className="text-sm text-primary mb-2">{project.projectSource}</p>
+        <p className="text-sm text-primary font-semibold tracking-wide mb-2">
+          {project.projectSource}
+        </p>
         <p className="text-sm text-muted-foreground mb-4">
           {project.description}
         </p>
-        <div className="bg-sky-500/5 p-4 rounded-3xl border-l-4 border-blue-500 mb-4">
+        <div className="bg-background border p-4 rounded-xl  mb-4">
           <div className=" font-semibold flex items-center gap-2 mb-2">
-            <User size={16} className="text-blue-600 fill-blue-600" />
+            <div className="border bg-secondary rounded-lg p-2">
+              <User size={16} className="text-primary " />
+            </div>
             Role & Contribution
           </div>
           <p className="text-sm">{project.contribution}</p>
@@ -83,7 +87,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               if (!tool) return null;
               return (
                 <div key={toolId} className="flex flex-col items-center gap-2">
-                  <div className="  h-min  border-border dark:bg-secondary border rounded-2xl p-2 overflow-clip">
+                  <div className="  h-min  border-border bg-background border rounded-2xl p-2 overflow-clip">
                     <div className="relative ">
                       <Image
                         src={tool.img}

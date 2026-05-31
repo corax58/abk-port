@@ -10,31 +10,29 @@ export default function AboutMe() {
         <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
           {/* Bio Text Section */}
           <div className="md:w-1/2">
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-secondary-foreground/85 leading-relaxed">
               <p>
-                I am a Software Engineer with a{" "}
-                <strong>BSc in Computer Science</strong> and over a year of
-                professional experience. My expertise lies within the{" "}
-                <strong>React</strong>, <strong>Nextjs</strong> and{" "}
-                <strong>Typescript</strong> ecosystem, where I bridge the gap
-                between technical logic and visual design.
+                I'm a Software Engineer with a{" "}
+                <strong>BSc in Computer Science</strong> and a year of hands-on
+                experience building things people actually use. I live mostly in
+                the <strong>React</strong>, <strong>Next.js</strong>, and{" "}
+                <strong>TypeScript</strong> world.
               </p>
 
               <p>
-                I pride myself on{" "}
-                <strong>pixel-perfect design implementation</strong>,
-                performance optimization, and ensuring strong{" "}
-                <strong>SEO</strong>. My recent work includes building the
-                frontend for a food delivery application and successfully
-                optimizing websites to improve search engine visibility for
-                clients.
+                I care deeply about the details others skip — whether that's a
+                layout that holds up at every breakpoint, a Lighthouse score
+                worth bragging about, or{" "}
+                <strong>SEO fundamentals that actually move the needle</strong>.
+                Lately I've been building the frontend for a food delivery app
+                and helping clients get found on Google.
               </p>
 
               <p>
-                Beyond the screen, I have a deep appreciation for{" "}
-                <strong>various forms of art</strong>. This passion influences
-                my eye for detail and helps me create interfaces that are not
-                only functional but aesthetically pleasing.
+                Outside of code, I'm drawn to{" "}
+                <strong>art in a lot of its forms</strong> — and I think that
+                bleeds into how I work. Good interfaces should feel considered,
+                not just functional. That's the standard I hold myself to.
               </p>
             </div>
           </div>

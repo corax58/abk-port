@@ -4,64 +4,64 @@ export const projects: Project[] = [
   {
     title: "Venas Technologies",
     description:
-      "A corporate web presence utilizing a Headless CMS and Incremental Static Regeneration (ISR) to achieve top-tier SEO rankings and lightning-fast performance.",
+      "Corporate site for a tech company — built on a headless CMS with ISR so the content team can move fast without touching code, and Google actually finds it.",
     projectSource: "Venas Technologies",
     liveLink: "https://www.venastechnology.com/",
     status: "live",
     imgSrc: "/assets/projects/venas.png",
     alt: "Venas Technologies corporate website homepage",
     contribution:
-      "Developed modular components and integrated Prismic CMS for dynamic content management. Implemented complex UI micro-interactions using Framer Motion and audited Core Web Vitals to maximize search engine visibility.",
+      "Built the component system and wired up Prismic for content management. Added Framer Motion interactions throughout, then audited Core Web Vitals until the numbers were worth showing off.",
     toolsId: ["nextjs", "tailwind", "prismic", "framer"],
   },
   {
     title: "Doxiverse | AI for Healthcare",
     description:
-      "A centralized hub for discovering healthcare AI tools, featuring real-time updates and a community-driven review system.",
+      "A discovery platform for healthcare AI tools — think a curated directory with real-time updates and reviews from people actually using the tools.",
     projectSource: "Venas Technologies",
     liveLink: "https://doxiverse.com/",
     status: "live",
     imgSrc: "/assets/projects/doxiverse.png",
     alt: "Doxiverse healthcare AI platform dashboard",
     contribution:
-      "Delivered high-fidelity UI implementation from design mockups. Handled third-party API integrations and executed performance tuning to ensure smooth navigation through large datasets.",
+      "Took the designs from mockup to production, handled third-party API integrations, and tuned performance so browsing through a large dataset doesn't feel like it.",
     toolsId: ["nextjs", "tailwind"],
   },
   {
     title: "Astrah OS",
     description:
-      "A WhatsApp-first AI Business Operating System for GCC companies, streamlining CRM, sales workflows, automated follow-ups, and payments into a single platform built for real operators.",
+      "A WhatsApp-native business OS for GCC companies — CRM, sales workflows, follow-ups, and payments, all in one place. Built for operators, not just tech teams.",
     projectSource: "Venas Technologies",
     status: "live",
     imgSrc: "/assets/projects/astrah.png",
     liveLink: "http://astrah.net/",
     alt: "Astrah OS business operating system interface",
     contribution:
-      "Led key design decisions and delivered a fully pixel-perfect implementation of the entire site. Applied SEO best practices to improve discoverability, iterated based on real user feedback, and ensured a polished, high-performance user experience.",
+      "Owned the frontend end-to-end — from design decisions down to the last pixel. Handled SEO, iterated on real user feedback, and kept performance tight throughout.",
     toolsId: ["nextjs", "tailwind", "typescript"],
   },
   {
     title: "Time Delivery",
     description:
-      "A high-performance food delivery marketplace allowing users to explore menus and order from various restaurants. Features robust localization support for bi-directional layouts (LTR/RTL).",
+      "A food delivery marketplace where users can browse menus and order across restaurants. Fully localized with LTR/RTL support for Arabic, Pashto, and Dari speakers.",
     projectSource: "Venas Technologies",
     status: "inProgress",
     imgSrc: "/assets/projects/time.png",
     alt: "Screenshot of the Time Delivery application interface",
     contribution:
-      "Spearheaded the frontend development, architecting both static and complex dynamic routes. Engineered a comprehensive internationalization (i18n) system to ensure UI consistency across English, Pashto, and Dari, while optimizing load times for a seamless user experience.",
+      "Led the frontend from scratch — static pages, complex dynamic routes, and a full i18n system that keeps the UI consistent across three languages without breaking layouts.",
     toolsId: ["react", "nextjs", "tailwind", "typescript"],
   },
   {
     title: "Iqra-Net",
     description:
-      "A comprehensive EdTech platform facilitating Islamic learning through structured courses and live one-on-one mentorship sessions.",
+      "An EdTech platform for Islamic learning — structured courses and live one-on-one sessions with mentors, in one place.",
     projectSource: "Beseerah LLC",
     status: "inProgress",
     imgSrc: "/assets/projects/beseerah.png",
     alt: "Iqra-Net e-learning platform hero section",
     contribution:
-      "Translated UX designs into responsive, pixel-perfect code. Optimized asset delivery and component rendering to support real-time interaction features.",
+      "Turned UX designs into responsive code and optimized asset delivery so real-time features actually feel real-time.",
     toolsId: ["nextjs", "tailwind"],
   },
 ];

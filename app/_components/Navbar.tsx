@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
               <div className="pt-4 px-3">
                 <Button
                   className="w-full"
-                  onClick={() => window.open("mailto:hello@abubeker.dev")}
+                  onClick={() => window.open("mailto:abubekercorax@gmail.com")}
                 >
                   Hire Me
                 </Button>

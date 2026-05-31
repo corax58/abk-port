@@ -17,7 +17,7 @@ const Hero = () => {
       <AnimatedGridPattern
         // numSquares={6}
         maxOpacity={0.1}
-        // duration={10}
+        duration={1}
         // repeatDelay={10}
         className={cn(
           "mask-[radial-gradient(400px_circle_at_center,black,transparent)] md:mask-[radial-gradient(700px_circle_at_center,black,transparent)]",
@@ -45,7 +45,7 @@ const Hero = () => {
             </motion.div>
 
             <h1 className="text-foreground text-center py-6 text-5xl font-bold tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl leading-[1.15]! w-full font-heading">
-              Hi, I&apos;m <AuroraText speed={3}>Abubeker</AuroraText>
+              Hi, I&apos;m <span className="text-primary">Abubeker</span>
             </h1>
 
             <p className="mb-12 text-lg  text-muted-foreground md:text-xl text-balance  relative max-w-3xl">
