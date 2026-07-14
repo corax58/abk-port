@@ -1,18 +1,8 @@
 import { SkillCategory } from "@/types";
-
 export const SkillCategories: SkillCategory[] = [
   {
     title: "Frontend",
-    skillSlugs: [
-      "javascript",
-      "typescript",
-      "react",
-      "nextjs",
-      "tailwind",
-      "redux",
-      "react-query",
-      "framer",
-    ],
+    skillSlugs: ["javascript", "typescript", "react", "nextjs", "tailwind"],
   },
   {
     title: "Backend",
@@ -21,6 +11,10 @@ export const SkillCategories: SkillCategory[] = [
   {
     title: "Database & Tools",
     skillSlugs: ["postgresql", "mongodb", "mysql", "prisma", "prismic"],
+  },
+  {
+    title: "Automation",
+    skillSlugs: ["n8n"],
   },
 ];
 
@@ -106,6 +100,11 @@ export const skills = [
     slug: "typescript",
     name: "Typescript",
     img: "/assets/icons/typescript.svg",
+  },
+  {
+    slug: "n8n",
+    name: "n8n",
+    img: "/assets/icons/n8n.svg",
   },
   {
     slug: "prismic",
