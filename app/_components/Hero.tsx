@@ -35,7 +35,7 @@ const Hero = () => {
             >
               <Badge
                 variant="outline"
-                className=" px-3 relative shadow-sm dark:bg-black bg-white text-black dark:text-white"
+                className=" px-3 relative rounded-xs shadow-sm dark:bg-black bg-white text-black dark:text-white"
               >
                 <span className="text-sm text-muted-foreground">
                   Available for freelance & contract work
@@ -72,14 +72,14 @@ const Hero = () => {
             </p>
 
             <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
-              <Button asChild>
+              <Button asChild className="rounded-xs">
                 <Link href="#experience" className="flex items-center">
                   View My Work
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
 
-              <Button variant="outline" asChild>
+              <Button variant="outline" asChild className="rounded-xs">
                 <Link href="#contact" className="flex items-center">
                   Hire Me
                   <ArrowRightIcon className="w-4 h-4 ml-2" />

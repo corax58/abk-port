@@ -63,6 +63,7 @@ export const Navbar: React.FC = () => {
               <Button
                 size="sm"
                 onClick={() => window.open("mailto:hello@abubeker.dev")}
+                className="rounded-xs"
               >
                 Hire Me
               </Button>
@@ -105,7 +106,7 @@ export const Navbar: React.FC = () => {
               ))}
               <div className="pt-4 px-3">
                 <Button
-                  className="w-full"
+                  className="w-full rounded-xs"
                   onClick={() => window.open("mailto:abubekercorax@gmail.com")}
                 >
                   Hire Me

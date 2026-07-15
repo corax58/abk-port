@@ -11,7 +11,7 @@ const SkillCategoryCard = ({
   skillCategory: { skillSlugs, title },
 }: ToolCardProps) => {
   return (
-    <div className=" border rounded-2xl overflow-hidden">
+    <div className=" border rounded-xs overflow-hidden">
       <div className="w-full p-4 border-b bg-secondary">
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
@@ -21,13 +21,13 @@ const SkillCategoryCard = ({
           if (!skill) return null;
           return (
             <div key={slug} className="flex flex-col items-center gap-2 group ">
-              <div className="  h-min  border-border border rounded-2xl dark:bg-secondary p-4 overflow-clip">
+              <div className="  h-min  border-border border rounded-xs dark:bg-secondary p-4 overflow-clip">
                 <div className="relative flex items-center justify-center">
                   <div className="bg-white size-10 absolute blur-[55px] group-hover:blur-2xl"></div>
                   <Image
                     src={skill.img}
                     className={cn(
-                      `size-14 rounded-2xl group-hover:scale-110 transition-all z-10`,
+                      `size-14 rounded-xs group-hover:scale-110 transition-all z-10`,
                       skill.invertDark && "",
                     )}
                     alt={skill.name}
