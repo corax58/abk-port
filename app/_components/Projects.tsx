@@ -30,7 +30,10 @@ const Projects = () => {
             <ProjectCard key={index} project={project} />
           ))}
         </div>
-        <Button onClick={() => setLoaded((prev) => !prev)}>
+        <Button
+          className="rounded-xs"
+          onClick={() => setLoaded((prev) => !prev)}
+        >
           {loaded ? "Show Less" : "Load More"}
         </Button>
       </div>

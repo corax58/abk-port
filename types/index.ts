@@ -57,10 +57,12 @@ export type Icon = React.ForwardRefExoticComponent<IconProps>;
 export interface Project {
   title: string;
   description: string;
+  fullDescription: string;
   projectSource: string;
   status: "live" | "inProgress";
   liveLink?: string | undefined;
-  imgSrc: string;
+  featuredImage: string;
+  images: string[];
   alt: string;
   contribution: string;
   toolsId: string[];

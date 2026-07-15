@@ -19,18 +19,20 @@ const QuickLinks = () => {
   return (
     <div className="flex flex-col gap-4 md:max-w-sm max-md:items-center max-md:w-full ">
       <p className=" text-sm text-muted-foreground"> Connect with me</p>
-      <div className=" border-border border rounded-2xl p-2 flex justify-between items-center">
-        <Image
-          src={src}
-          className={` size-10 sm:size-14 rounded-lg hover:scale-110 transition-all border `}
-          alt={"gmail"}
-          width={54}
-          height={54}
-        ></Image>
+      <div className=" border-border border rounded-xs p-2 flex justify-between items-center">
+        <div className="relative size-10 sm:size-14 rounded-xs border transition-all overflow-hidden hover:scale-110 ">
+          <Image
+            src={src}
+            className={` size-10 sm:size-14  scale-110  `}
+            alt={"gmail"}
+            width={54}
+            height={54}
+          ></Image>
+        </div>
         <p className="font-mono text-primary">AbubekerCorax@gmail.com</p>
         <Button
           variant={"ghost"}
-          className=" rounded-lg curosr-pointer"
+          className=" rounded-xs curosr-pointer"
           onClick={handleCopy}
         >
           {isCopied ? <CopyCheck /> : <Copy />}
@@ -43,15 +45,15 @@ const QuickLinks = () => {
             href={socialLink.url}
             target="_blank"
             key={index}
-            className="  h-fit w-fit border-border border rounded-2xl p-2 overflow-clip"
+            className="  h-fit w-fit border-border border rounded-xs p-2 overflow-clip"
           >
-            <div className="relative ">
+            <div className="relative rounded-xs overflow-hidden hover:scale-110 transition-all">
               <div className=" w-full h-full flex ">
                 <div className="absolute w-5 h-5 blur-md  rounded-full bg-white"></div>
               </div>
               <Image
                 src={socialLink.icon}
-                className={`size-13.5 rounded-lg hover:scale-110 transition-all `}
+                className={`size-13.5 rounded-xs  scale-115  `}
                 alt={socialLink.platform}
                 width={54}
                 height={54}

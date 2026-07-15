@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx shadcn@latest add dialog --yes)",
+      "Bash(npx tsc *)",
+      "Bash(npx shadcn@latest add carousel --yes)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest add carousel --yes --overwrite=false)"
+    ]
+  }
+}

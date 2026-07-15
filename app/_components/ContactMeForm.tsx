@@ -100,7 +100,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
   return (
     <form
       className={cn(
-        "bg-transparent relative z-10 rounded-3xl p-6 w-full md:w-1/2 border h-fit",
+        "bg-transparent relative z-10 rounded-xs p-6 w-full md:w-1/2 border h-fit",
         className,
       )}
       onSubmit={handleSubmit}
@@ -112,7 +112,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
               Full Name <StyledAstrix />
             </label>
             <Input
-              className={cn("w-full ")}
+              className={cn("w-full rounded-xs")}
               placeholder="Eg, john doe"
               value={formData.full_name}
               required
@@ -125,7 +125,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
               Email <StyledAstrix />
             </label>
             <Input
-              className={cn("w-full")}
+              className={cn("w-full rounded-xs")}
               type="email"
               placeholder="Example@email.com"
               required
@@ -140,7 +140,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
             Country <StyledAstrix />
           </label>
           <Input
-            className={cn("w-full")}
+            className={cn("w-full rounded-xs")}
             placeholder="Eg, United kingdom"
             value={formData.country}
             name="country"
@@ -153,7 +153,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
             Company <StyledAstrix />
           </label>
           <Input
-            className={cn("w-full")}
+            className={cn("w-full rounded-xs")}
             placeholder="Eg, United kingdom"
             value={formData.company}
             tabIndex={-1}
@@ -167,7 +167,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
           </label>
 
           <Input
-            className={cn("w-full mt-2")}
+            className={cn("w-full mt-2 rounded-xs")}
             placeholder="Please specify your subject"
             value={formData.subject}
             required
@@ -180,7 +180,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
             Description <StyledAstrix />
           </label>
           <Textarea
-            className={cn("w-full", "h-20")}
+            className={cn("w-full rounded-xs", "h-20")}
             placeholder="Write your questions in detail to support your Subject..."
             value={formData.description}
             required
@@ -191,7 +191,7 @@ const ContactMeForm = ({ className }: ContactMeFormProps) => {
       </div>
 
       <Button
-        className="mt-8 w-full h-11  rounded-xl "
+        className="mt-8 w-full h-11 rounded-xs"
         type="submit"
         disabled={isLoading}
       >

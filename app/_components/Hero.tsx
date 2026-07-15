@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Highlighter } from "@/components/ui/highlighter";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, FileText } from "lucide-react";
 import Link from "next/link";
 import AnimationContainer from "./AnimationContainer";
 import MaxWidthWrapper from "./MaxWidthWrapper";
@@ -86,6 +86,16 @@ const Hero = () => {
                 </Link>
               </Button>
             </div>
+
+            <a
+              href="https://www.resume.lol/share/bg03w6u"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 mt-6 text-sm text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline"
+            >
+              <FileText className="w-4 h-4" />
+              Get Resume
+            </a>
           </AnimationContainer>
         </div>
       </MaxWidthWrapper>
