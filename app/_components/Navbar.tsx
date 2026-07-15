@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
           <div className="shrink-0 cursor-pointer">
             <a
               href="#"
-              className="text-xl font-bold font-display tracking-tight "
+              className="text-2xl font-bold font-heading tracking-tight "
             >
               abubeker<span className="text-primary">.dev</span>
             </a>

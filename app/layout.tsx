@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Manrope, Geist_Mono } from "next/font/google";
+import {
+  Space_Grotesk,
+  Manrope,
+  Geist_Mono,
+  Bricolage_Grotesque,
+} from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./_components/Navbar";
 import Footer from "./_components/Footer";
@@ -14,6 +19,10 @@ const manrope = Manrope({
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
 });
 
@@ -98,7 +107,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${manrope.variable} ${spaceGrotesk.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${spaceGrotesk.variable} ${bricolageGrotesque.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

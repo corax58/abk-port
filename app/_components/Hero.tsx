@@ -64,10 +64,11 @@ const Hero = () => {
                 color="#007acc"
                 animationDuration={1000}
               >
-                <span className=" text-white">TypeScript.</span>
+                <span className=" text-white ">TypeScript.</span>
               </Highlighter>
-              From dashboards to internal tools, I focus on clean architecture,
-              great UX, and production-ready solutions.
+              <span className="pl-2" /> From dashboards to internal tools, I
+              focus on clean architecture, great UX, and production-ready
+              solutions.
             </p>
 
             <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
