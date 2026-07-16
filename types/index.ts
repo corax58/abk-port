@@ -59,7 +59,7 @@ export interface Project {
   description: string;
   fullDescription: string;
   projectSource: string;
-  status: "live" | "inProgress";
+  status: "live" | "inProgress" | "completed";
   liveLink?: string | undefined;
   featuredImage: string;
   images: string[];

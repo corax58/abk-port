@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const [loaded, setLoaded] = useState(false);
 
-  const filteredProjects = loaded ? projects : projects.slice(0, 3);
+  const filteredProjects = loaded ? projects : projects.slice(0, 4);
   return (
     <section id="experience" className="py-20  bg-secondary  w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-16 items-center">

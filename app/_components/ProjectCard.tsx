@@ -189,7 +189,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <p className="text-sm text-primary font-semibold tracking-wide">
             {project.projectSource}
           </p>
-          <div className="text-sm text-muted-foreground [&>p]:mb-3 last:[&>p]:mb-0">
+          <div className="text-sm text-muted-foreground [&>p]:mb-3 last:[&>p]:mb-0 prose dark:prose-invert">
             <ReactMarkdown>{project.fullDescription}</ReactMarkdown>
           </div>
 
