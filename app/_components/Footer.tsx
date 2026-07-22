@@ -12,8 +12,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
           <div className="space-y-4">
-            <Link href="/" className="inline-flex items-baseline gap-1">
-              <span className="text-xl font-bold font-display tracking-tight">
+            <Link
+              href="/"
+              className="inline-flex items-baseline gap-1 font-heading"
+            >
+              <span className="text-xl font-bold  tracking-tight">
                 abubeker
               </span>
               <span className="text-xl font-bold font-display tracking-tight text-primary">
