@@ -38,7 +38,7 @@ const Hero = () => {
                 className=" px-3 relative rounded-xs shadow-sm dark:bg-black bg-white text-black dark:text-white"
               >
                 <span className="text-sm text-muted-foreground">
-                  Available for freelance & contract work
+                  Open for freelance and contract work
                 </span>
                 <BorderBeam duration={20} size={25} className="m-1" />
               </Badge>
@@ -48,27 +48,18 @@ const Hero = () => {
               Hi, I&apos;m <span className="text-primary">Abubeker</span>
             </h1>
 
-            <p className="mb-12 text-lg  text-muted-foreground md:text-xl text-balance  relative max-w-3xl">
-              A{" "}
-              <Highlighter
-                action="underline"
-                color="#FF9800"
-                animationDuration={1000}
-              >
-                <span className="pr-2">full-stack </span>
-              </Highlighter>
-              developer specializing in building high-performance, scalable web
-              applications using{" "}
+            <p className="mb-12 text-lg text-muted-foreground md:text-xl text-balance relative max-w-3xl">
+              I'm a full-stack developer who works mostly in{" "}
               <Highlighter
                 action="highlight"
                 color="#007acc"
                 animationDuration={1000}
               >
-                <span className=" text-white ">TypeScript.</span>
+                <span className="text-white">TypeScript</span>
               </Highlighter>
-              <span className="pl-2" /> From dashboards to internal tools, I
-              focus on clean architecture, great UX, and production-ready
-              solutions.
+              . I build dashboards, internal tools, and web apps that hold up in
+              production — not just in a demo. I like clean code and interfaces
+              that don't make people think too hard.
             </p>
 
             <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
