@@ -1,15 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 import { motion } from "framer-motion";
-import { projects } from "@/data/projects";
+import { venasTechnologies } from "@/data/projects/venas-technologies";
+import { timePlatform } from "@/data/projects/time-platform";
+import { aiLeadEnrichmentPipeline } from "@/data/projects/lead-pipeline";
 import ProjectCard from "./ProjectCard";
 import { Button } from "@/components/ui/button";
 
-const Projects = () => {
-  const [loaded, setLoaded] = useState(false);
+const featuredProjects = [
+  venasTechnologies,
+  timePlatform,
+  aiLeadEnrichmentPipeline,
+];
 
-  const filteredProjects = loaded ? projects : projects.slice(0, 4);
+const Projects = () => {
   return (
     <section id="experience" className="py-20  bg-secondary  w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-16 items-center">
@@ -26,15 +31,12 @@ const Projects = () => {
         </div>
 
         <div className=" flex flex-col gap-16">
-          {filteredProjects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
-        <Button
-          className="rounded-xs"
-          onClick={() => setLoaded((prev) => !prev)}
-        >
-          {loaded ? "Show Less" : "Load More"}
+        <Button asChild className="rounded-xs">
+          <Link href="/projects">Show More</Link>
         </Button>
       </div>
     </section>

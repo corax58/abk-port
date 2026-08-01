@@ -2,6 +2,7 @@ import { getSkillBySlug } from "@/data/skills";
 import { cn } from "@/lib/utils";
 import { SkillCategory } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface ToolCardProps {
@@ -20,7 +21,12 @@ const SkillCategoryCard = ({
           const skill = getSkillBySlug(slug);
           if (!skill) return null;
           return (
-            <div key={slug} className="flex flex-col items-center gap-2 group ">
+            <Link
+              key={slug}
+              href={`/projects?tools=${slug}`}
+              aria-label={`Filter projects by ${skill.name}`}
+              className="flex flex-col items-center gap-2 group "
+            >
               <div className="  h-min  border-border border rounded-xs dark:bg-secondary p-4 overflow-clip">
                 <div className="relative flex items-center justify-center">
                   <div className="bg-white size-10 absolute blur-[55px] group-hover:blur-2xl"></div>
@@ -37,7 +43,7 @@ const SkillCategoryCard = ({
                 </div>
               </div>
               <p className="text-sm ">{skill.name}</p>
-            </div>
+            </Link>
           );
         })}
       </div>

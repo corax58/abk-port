@@ -5,11 +5,13 @@ import { Menu, X } from "lucide-react";
 import { NAV_ITEMS } from "../../constants";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +25,24 @@ export const Navbar: React.FC = () => {
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string,
   ) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const hashIndex = href.indexOf("#");
+    if (hashIndex === -1) {
+      // Plain route (e.g. /projects) — let Link navigate normally.
       setMobileMenuOpen(false);
+      return;
     }
+
+    const targetPath = href.slice(0, hashIndex) || "/";
+    if (pathname === targetPath) {
+      // Already on the target page — smooth-scroll instead of reloading.
+      e.preventDefault();
+      const element = document.querySelector(href.slice(hashIndex));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    // Otherwise let Link navigate to the homepage and jump to the hash.
+    setMobileMenuOpen(false);
   };
 
   return (

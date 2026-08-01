@@ -1,10 +1,10 @@
 import { ExperienceItem, ProjectItem } from "@/types";
 
 export const NAV_ITEMS = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [

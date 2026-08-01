@@ -23,9 +23,13 @@ import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Project;
+  /** Forces the single-column, image-over-content layout (how the card
+   * renders on tablet) instead of switching to a side-by-side layout on
+   * large screens. Used when the card lives in a multi-column grid. */
+  compact?: boolean;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, compact = false }: ProjectCardProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -34,9 +38,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="grid grid-cols-1 lg:grid-cols-2 border rounded-xs overflow-hidden bg-background"
+        className={cn(
+          "grid grid-cols-1 border rounded-xs overflow-hidden bg-background",
+          !compact && "lg:grid-cols-2",
+        )}
       >
-        <div className="relative w-full min-h-[280px] max-md:border-b md:border-r">
+        <div
+          className={cn(
+            "relative w-full min-h-[280px] max-md:border-b md:border-r",
+            compact && "md:min-h-[220px]",
+          )}
+        >
           <Image
             src={project.featuredImage}
             alt={project.alt}
@@ -45,7 +57,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           />
         </div>
         <div className="w-full p-6 flex flex-col justify-center">
-          <h3 className="text-3xl font-semibold mb-1">{project.title}</h3>
+          <h3
+            className={cn(
+              "text-3xl font-semibold mb-1",
+              compact && "text-2xl",
+            )}
+          >
+            {project.title}
+          </h3>
           <p className="text-sm text-primary font-semibold tracking-wide mb-2">
             {project.projectSource}
           </p>

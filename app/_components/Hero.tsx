@@ -47,19 +47,26 @@ const Hero = () => {
             <h1 className="text-foreground text-center py-6 text-5xl font-bold tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl leading-[1.15]! w-full font-heading">
               Hi, I&apos;m <span className="text-primary">Abubeker</span>
             </h1>
-
             <p className="mb-12 text-lg text-muted-foreground md:text-xl text-balance relative max-w-3xl">
-              I'm a full-stack developer who works mostly in{" "}
+              I'm a full-stack{" "}
               <Highlighter
                 action="highlight"
                 color="#007acc"
                 animationDuration={1000}
               >
-                <span className="text-white">TypeScript</span>
-              </Highlighter>
-              . I build dashboards, internal tools, and web apps that hold up in
-              production — not just in a demo. I like clean code and interfaces
-              that don't make people think too hard.
+                <span className="text-white">TypeScript </span>
+              </Highlighter>{" "}
+              developer and{" "}
+              <Highlighter
+                action="highlight"
+                color="#f02698"
+                animationDuration={1000}
+              >
+                <span className="text-white">AI automation </span>
+              </Highlighter>{" "}
+              expert. I build dashboards, internal tools, and automation
+              pipelines that hold up in production — not just in a demo. I like
+              clean code and workflows that don't make people think too hard.
             </p>
 
             <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">

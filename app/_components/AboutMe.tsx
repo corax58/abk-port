@@ -16,29 +16,32 @@ export default function AboutMe() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div className="relative grid grid-cols-1 md:grid-cols-2 rounded-xs border bg-background overflow-hidden ">
           {/* Bio / "message" side */}
-          <div className="space-y-4 text-secondary-foreground/85 leading-relaxed ">
-            <p>
-              I&apos;m a Software Engineer with a{" "}
-              <strong>BSc in Computer Science</strong> and over a year of
-              hands-on experience building things people actually use. Most of
-              my time is spent in the <strong>React</strong>,{" "}
-              <strong>Next.js</strong>, and <strong>TypeScript</strong> world.
-            </p>
+          <div className="relative order-2 md:order-1 flex flex-col justify-center border-t md:border-t-0 border-border p-8 sm:p-10 lg:p-14">
+            <div className="space-y-4 text-secondary-foreground/85 leading-relaxed ">
+              <p>
+                I&apos;m a Software Engineer with a{" "}
+                <strong>BSc in Computer Science</strong> and over a year of
+                hands-on experience building things people actually use. Most of
+                my time is spent in the <strong>React</strong>,{" "}
+                <strong>Next.js</strong>, and <strong>TypeScript</strong> world.
+              </p>
 
-            <p>
-              I care about the details other people skip — a layout that holds
-              up at every breakpoint, a Lighthouse score worth bragging about,
-              or <strong>SEO fundamentals that actually move the needle</strong>
-              . Right now that means building the frontend for a food delivery
-              app and helping clients get found on Google.
-            </p>
+              <p>
+                I care about the details other people skip — a layout that holds
+                up at every breakpoint, a Lighthouse score worth bragging about,
+                or{" "}
+                <strong>SEO fundamentals that actually move the needle</strong>.
+                Right now that means building the frontend for a food delivery
+                app and helping clients get found on Google.
+              </p>
 
-            <p>
-              Outside of code, I&apos;m drawn to{" "}
-              <strong>art in a lot of its forms</strong>, and I think that shows
-              up in how I work. Good interfaces should feel considered, not just
-              functional — that&apos;s the standard I hold myself to.
-            </p>
+              <p>
+                Outside of code, I&apos;m drawn to{" "}
+                <strong>art in a lot of its forms</strong>, and I think that
+                shows up in how I work. Good interfaces should feel considered,
+                not just functional — that&apos;s the standard I hold myself to.
+              </p>
+            </div>
           </div>
 
           {/* Vertical divider — sits on the grid, so it's always full height */}
